@@ -1,49 +1,44 @@
-# EX 30 C program to add three integer elements in an array using realloc() and that array already has four elements.
+# EX 30 C program to add two integer elements in an array using realloc() and that array already has three elements.
 ## DATE:
 ## AIM:
-To write a C program to add three integer elements in an array using realloc() and that array already has four elements.
+To write a C program to add two integer elements in an array using realloc() and that array already has three elements.
 
 ## Algorithm
-
-1.Start the program and allocate memory for an array of 4 integers using malloc().
-
-2.Initialize the first four elements of the array.
-
-3.Use realloc() to resize the array to hold 7 elements.
-
-4.Add three more integer elements to the resized array.
-
-5.Display all the elements of the array and stop the program.
+1. Start.
+2. Declare array size
+3. Initialize array elements using malloc()
+4. Update array size using realloc()
+5. Print the result.
+6. End.  
 
 ## Program:
 ```
-#include<stdio.h>
-#include<stdlib.h>
-int main()
-{
-    int *p,*np;
-    p=(int*)malloc(7*sizeof(int));
-    p[0]=1;
-    p[1]=2;
-    p[2]=3;
-    p[3]=4;
-    
-    np=(int*)realloc(p,sizeof(int));
-    np[4]=12;
-    np[5]=10;
-    np[6]=8;
-    
-    for(int i=0;i<7;i++)
-    {
-        printf("%d ",np[i]);
-    }
-    
-}
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+ int *arr, size, i;
+ size = 3;
+ arr = (int *)malloc(size * sizeof(int)); 
+ for (i = 0; i < size; i++) {
+ arr[i] = i * 10; }
+ printf("Original array:\n");
+ for (i = 0; i < size; i++) {
+ printf("%d ", arr[i]);
+ }
+ printf("\n");
+ size *= 2;
+ arr = (int *)realloc(arr, size * sizeof(int)); 
+ for (i = size / 2; i < size; i++) {
+ arr[i] = i * 10;
+printf("Updated array:\n");
+ for (i = 0; i < size; i++) {
+ printf("%d ", arr[i]);
+ }}
 ```
 
 ## Output:
+<img width="1129" height="254" alt="image" src="https://github.com/user-attachments/assets/e06a76df-af15-4524-b8f8-f7b1434aa2a9" />
 
-<img width="372" height="125" alt="Screenshot 2026-03-19 154922" src="https://github.com/user-attachments/assets/d6cccd52-adcb-4f6e-8c12-d8075f6dfc05" />
 
 
 ## Result:

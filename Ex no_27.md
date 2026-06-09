@@ -1,54 +1,32 @@
-# EX 27 Create a C program to read and display 3 book details using array of structures.
+# EX 27 C program that demonstrates the use of typedef to create a new alias name for a data type.
 ## DATE:
 ## AIM:
-
-To write a C program to read and display 3 book details using array of structures.
+To write a C program that demonstrates the use of typedef to create a new alias name for a data type.
 
 ## Algorithm
-
-1.Start the program and define a structure book with fields title, author, publication, and price.
-
-2.Declare an array of structures to store details of 3 books.
-
-3.Use a loop to read the details (title, author, publication, price) for each book.
-
-4.Use another loop to access and display the stored book details.
-
-5.Stop the program.
+1. Start.
+2. Declare a variable value of type char.
+3. Prompt the user to enter a value.
+4. Read the value using scanf.
+5. Check eligible for marriage.
+6. If age >= 21, print "Eligible".
+7. If false, print " Not Eligible".
+8. End.   
 
 ## Program:
 ```
-#include<stdio.h>
-struct book{
-    char title[100];
-    char author[50];
-    char publication[100];
-    float price;
-};
-int main()
-{
-    struct book books[3];
-    for(int i=0;i<3;i++)
-    {
-        
-        scanf(" %[^\n]",books[i].title);
-        scanf(" %[^\n]",books[i].author);
-        scanf(" %[^\n]",books[i].publication);
-        scanf("%f",&books[i].price);
-    }
-    for(int i=0;i<3;i++)
-    {
-        printf("Title: %s\n",books[i].title);
-        printf("Author: %s\n",books[i].author);
-        printf("Publication: %s\n",books[i].publication);
-        printf("Price: %.2f",books[i].price);
-    }
+#include <stdio.h>
+typedef int MyInt;
+int main() {
+ MyInt num = 10;
+ printf("The value of num is: %d\n", num);
+ return 0;
 }
 ```
 
 ## Output:
+<img width="1126" height="180" alt="image" src="https://github.com/user-attachments/assets/5cf2b763-c146-4087-b356-4fe0e2998ff6" />
 
-<img width="638" height="360" alt="Screenshot 2026-03-19 163113" src="https://github.com/user-attachments/assets/680ca262-dbd1-4d67-a857-252b97679156" />
 
 
 ## Result:

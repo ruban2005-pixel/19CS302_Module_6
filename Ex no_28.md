@@ -1,57 +1,31 @@
-# EX 28 C program to print the values of the weekdays based on the following enum declaration.
-enum day {sunday = 1, monday, tuesday = 5,wednesday, thursday = 10, friday, saturday};
-
+# EX 28 C program that demonstrates the use of enum (enumeration) type to define and use named integer constants.
 ## DATE:
 ## AIM:
-To write a C program to print the values of the weekdays based on the following enum declaration.
-enum day {sunday = 1, monday, tuesday = 5,wednesday, thursday = 10, friday, saturday};
+To write a C program that demonstrates the use of enum (enumeration) type to define and use named integer constants.
 
 ## Algorithm
-
-1.Start the program and declare an enumeration day with assigned values for weekdays.
-
-2.Define the enum constants with specific and default values as given.
-
-3.In the main() function, access each enum constant.
-
-4.Print the values of all the weekdays using printf().
-
-5.Stop the program.
+1. Start.
+2. Declare enum type
+3. Declare all days in a week
+4. Print result
+5. End.
 
 ## Program:
 ```
 #include <stdio.h>
-
-enum day {
-    sunday = 1,
-    monday,
-    tuesday = 5,
-    wednesday,
-    thursday = 10,
-    friday,
-    saturday
+enum weekdays {
+ Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
 };
-
 int main() {
-    printf("%d %d %d %d %d %d %d\n", 
-        sunday,     
-        monday,     
-        tuesday,    
-        wednesday,  
-        thursday,   
-        friday,     
-        saturday   
-    );
-
-    return 0;
+ enum weekdays today = Wednesday;
+ if (today == Wednesday) {
+ printf("Today is Wednesday.\n");
+ }
 }
-
 ```
 
 ## Output:
-
-<img width="346" height="120" alt="Screenshot 2026-03-19 155751" src="https://github.com/user-attachments/assets/a63b93e5-4323-42c1-af3c-77fabe1ef22d" />
-
+<img width="1127" height="184" alt="image" src="https://github.com/user-attachments/assets/e46d43d9-e6a7-4b0c-838a-c1ddfbcdcddc" />
 
 
 ## Result:
